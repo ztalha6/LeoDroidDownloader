@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.adcolony:sdk:4.6.5@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/fbf49c4aa81fcd1cab9cd3dcbefae888/transformed/jetified-sdk-4.6.5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e625de998afdb6034e2f65cee9b7348/transformed/jetified-sdk-4.6.5/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6e625de998afdb6034e2f65cee9b7348/transformed/jetified-sdk-4.6.5/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6e625de998afdb6034e2f65cee9b7348/transformed/jetified-sdk-4.6.5/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adcolony/sdk/4.6.5/c7b22523cfc04fce9cb8a2ea6691cd99cae84dc1/sdk-4.6.5-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.adcolony/sdk/4.6.5/ddc09940c31b285b2cb64050f42be86e97b33acf/sdk-4.6.5-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

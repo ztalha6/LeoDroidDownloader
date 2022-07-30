@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/android.iml" filepath="$PROJECT_DIR$/.idea/modules/android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/android.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.iml" filepath="$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.main.iml" filepath="$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/388441555/android.google_mobile_ads.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.iml" filepath="$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/-1148873480/android.url_launcher_android.unitTest.iml" />
+    </modules>
+  </component>
+</project>
