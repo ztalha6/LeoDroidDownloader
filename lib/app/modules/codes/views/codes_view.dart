@@ -11,7 +11,7 @@ class CodesView extends GetView<CodesController> {
     return GetX<CodesController>(builder: (model) {
       return Scaffold(
         appBar: AppBar(
-          title: const Text('Codes'),
+          title: Text(Get.arguments['isPlus'] ? 'Droid Plus' : 'Codes'),
           centerTitle: true,
         ),
         body: model.isLoading.isTrue
