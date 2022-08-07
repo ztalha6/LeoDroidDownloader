@@ -18,8 +18,9 @@ class CodesController extends GetxController {
 
   Future<List<ApplicationResponse>> getApps() async {
     try {
-      List<ApplicationResponse> response =
-          await APIService().getApplications(withcode: true);
+      List<ApplicationResponse> response = Get.arguments['isPlus']
+          ? await APIService().getApplications(droidPlus: true)
+          : await APIService().getApplications(withcode: true);
       return response;
     } catch (e) {
       ExceptionHandler().handle(e);

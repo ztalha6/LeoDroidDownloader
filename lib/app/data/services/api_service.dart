@@ -6,11 +6,15 @@ import 'package:teamx/app/data/services/http/api.dart';
 
 class APIService {
   final Api _api = Api();
-  Future<List<ApplicationResponse>> getApplications(
-      {bool withcode = false}) async {
-    Response response = await _api
-        .createDio()
-        .get(withcode ? ApiContants.code : ApiContants.applications);
+  Future<List<ApplicationResponse>> getApplications({
+    bool withcode = false,
+    bool droidPlus = false,
+  }) async {
+    Response response = await _api.createDio().get(withcode
+        ? ApiContants.code
+        : droidPlus
+            ? ApiContants.droidPlus
+            : ApiContants.applications);
     return ApplicationResponse.fromJsonList(response.data);
   }
 

@@ -37,88 +37,144 @@ class HomeView extends GetView<HomeController> {
           )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                color: const Color(0xfff9f0ff),
-                border: Border.all(
-                  color: Theme.of(context).primaryColor,
-                  width: 0.5,
-                ),
-              ),
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height / 4,
-              child: InkWell(
-                onTap: () {
-                  Get.toNamed(Routes.APPS);
-                },
+      body: Stack(
+        children: [
+          ListView(
+            children: [
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Image.asset(
-                      'assets/icon_apps.png',
-                      height: MediaQuery.of(context).size.height / 10,
-                    ),
-                    const SizedBox(height: 15),
-                    const Text(
-                      'Applications',
-                      style: TextStyle(
-                        color: Color(0xff34273e),
-                        fontSize: 20,
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xfff9f0ff),
+                        border: Border.all(
+                          color: Theme.of(context).primaryColor,
+                          width: 0.5,
+                        ),
+                      ),
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height / 4,
+                      child: InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.APPS);
+                        },
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Image.asset(
+                              'assets/icon_apps.png',
+                              height: MediaQuery.of(context).size.height / 10,
+                            ),
+                            const SizedBox(height: 15),
+                            const Text(
+                              'Applications',
+                              style: TextStyle(
+                                color: Color(0xff34273e),
+                                fontSize: 20,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xfff9f0ff),
+                        border: Border.all(
+                          color: Theme.of(context).primaryColor,
+                          width: 0.5,
+                        ),
+                      ),
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height / 4,
+                      child: InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.CODES,
+                              arguments: {"isPlus": false});
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/icon_code.png',
+                                height: MediaQuery.of(context).size.height / 10,
+                              ),
+                              const SizedBox(height: 15),
+                              const Text(
+                                'Codes',
+                                style: TextStyle(
+                                  color: Color(0xff34273e),
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: const Color(0xfff9f0ff),
+                        border: Border.all(
+                          color: Theme.of(context).primaryColor,
+                          width: 0.5,
+                        ),
+                      ),
+                      width: double.infinity,
+                      height: MediaQuery.of(context).size.height / 4,
+                      child: InkWell(
+                        onTap: () {
+                          Get.toNamed(Routes.CODES,
+                              arguments: {"isPlus": true});
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.only(top: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.asset(
+                                'assets/droid-plus.png',
+                                height: MediaQuery.of(context).size.height / 10,
+                              ),
+                              const SizedBox(height: 15),
+                              const Text(
+                                'DroidPlus',
+                                style: TextStyle(
+                                  color: Color(0xff34273e),
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 100),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Container(
-              decoration: BoxDecoration(
-                color: const Color(0xfff9f0ff),
-                border: Border.all(
-                  color: Theme.of(context).primaryColor,
-                  width: 0.5,
-                ),
-              ),
-              width: double.infinity,
-              height: MediaQuery.of(context).size.height / 4,
-              child: InkWell(
-                onTap: () {
-                  Get.toNamed(Routes.CODES);
-                },
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 16),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        'assets/icon_code.png',
-                        height: MediaQuery.of(context).size.height / 10,
-                      ),
-                      const SizedBox(height: 15),
-                      const Text(
-                        'Codes',
-                        style: TextStyle(
-                          color: Color(0xff34273e),
-                          fontSize: 20,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+            ],
+          ),
+          Align(
+            alignment: Alignment.bottomCenter,
+            // bottom: 0,
+            child: Container(
+              color: Colors.white,
+              height: 71,
+              child: SizedBox(
+                height: controller.bannarAd.ad!.size.height.toDouble(),
+                width: double.infinity,
+                child: AdWidget(ad: controller.bannarAd.ad!),
               ),
             ),
-            Spacer(),
-            SizedBox(
-              height: controller.bannarAd.ad!.size.height.toDouble(),
-              width: double.infinity,
-              child: AdWidget(ad: controller.bannarAd.ad!),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
