@@ -1,9 +1,33 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 import 'package:teamx/app/routes/app_pages.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../controllers/home_controller.dart';
+
+class Splash extends StatefulWidget {
+  @override
+  _SplashState createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+        Duration(seconds: 3),
+        () => Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => HomeView())));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+        color: Color(0xff5f1399), child: Image.asset('assets/logo.png'));
+  }
+}
 
 class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
