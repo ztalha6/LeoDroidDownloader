@@ -1,6 +1,6 @@
-import 'package:flutter_ads_mediation/ad_unit_ids/ad_unit_id.dart';
 import 'package:flutter_ads_mediation/ads_providers/banner_ads_provider.dart';
 import 'package:get/get.dart';
+import 'package:teamx/ad_unit_ids/ad_unit_id.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeController extends GetxController {
