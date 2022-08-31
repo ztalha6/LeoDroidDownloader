@@ -60,8 +60,10 @@ class CodesView extends GetView<CodesController> {
                                 backgroundColor: Theme.of(context).primaryColor,
                                 // Background Color
                               ),
-                              child: const Text(
-                                'View Code',
+                              child: Text(
+                                Get.arguments['isPlus']
+                                    ? 'Download'
+                                    : 'View Code',
                                 style: TextStyle(fontSize: 12),
                               ),
                             )
