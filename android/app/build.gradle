@@ -79,9 +79,8 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'com.google.android.gms:play-services-ads:21.1.0'
-    implementation "com.google.ads.mediation:applovin:10.3.5.0"
-    // implementation "com.google.ads.mediation:facebook:6.0.0.0"
-    implementation "com.google.ads.mediation:adcolony:4.6.5.0"
+implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+implementation "com.google.android.gms:play-services-ads:7.8.0"
+implementation "com.google.ads.mediation:applovin:10.3.5.0"
+implementation "com.google.ads.mediation:adcolony:4.6.5.0"
 }

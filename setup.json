@@ -7,7 +7,7 @@
         "interstitialIOS":"", 
         "rewardedIOS":"",
         "appIdAndroid":"ca-app-pub-6054901892311065~9844741751", 
-        "bannerAndroid":"", 
+        "bannerAndroid":"ca-app-pub-6054901892311065/8754349885", 
         "adManagerBannerAndroid":"",
         "interstitialAndroid":"", 
         "rewardedAndroid":"",
@@ -20,7 +20,7 @@
     },
 
     "Facebook" : {
-        "doSetup": true, 
+        "doSetup": false, 
         "sdk_version":"6.0.0.0"
     }, 
     "AdColony" : {
