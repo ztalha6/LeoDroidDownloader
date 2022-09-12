@@ -9,12 +9,13 @@ class APIService {
   Future<List<ApplicationResponse>> getApplications({
     bool withcode = false,
     bool droidPlus = false,
+    required int page,
   }) async {
     Response response = await _api.createDio().get(withcode
-        ? ApiContants.code
+        ? "${ApiContants.code}&page=$page"
         : droidPlus
-            ? ApiContants.droidPlus
-            : ApiContants.applications);
+            ? "${ApiContants.droidPlus}&page=$page"
+            : "${ApiContants.applications}&page=$page");
     return ApplicationResponse.fromJsonList(response.data);
   }
 

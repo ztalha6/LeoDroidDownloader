@@ -5,8 +5,10 @@ import 'package:teamx/app/data/services/exception_handler.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CodesController extends GetxController {
+  RxBool isLoadingMore = false.obs;
   RxBool isLoading = false.obs;
   RxList<ApplicationResponse> appList = RxList([]);
+  int page = 1;
 
   @override
   Future<void> onInit() async {
@@ -16,20 +18,28 @@ class CodesController extends GetxController {
     super.onInit();
   }
 
-  Future<List<ApplicationResponse>> getApps() async {
+  Future<List<ApplicationResponse>> getApps(int page) async {
     try {
       List<ApplicationResponse> response = Get.arguments['isPlus']
-          ? await APIService().getApplications(droidPlus: true)
-          : await APIService().getApplications(withcode: true);
+          ? await APIService().getApplications(droidPlus: true, page: page)
+          : await APIService().getApplications(withcode: true, page: page);
       return response;
     } catch (e) {
       ExceptionHandler().handle(e);
-      return [ApplicationResponse(id: 0)];
+      return [];
     }
   }
 
   getData() async {
-    appList.value = await getApps();
+    appList.value = await getApps(page);
+  }
+
+  loadMore() async {
+    isLoadingMore.value = true;
+    page++;
+    List<ApplicationResponse> list = await getApps(page);
+    if (list.isNotEmpty) appList.addAll(list);
+    isLoadingMore.value = false;
   }
 
   Future<void> urlLaunch(int i) async {

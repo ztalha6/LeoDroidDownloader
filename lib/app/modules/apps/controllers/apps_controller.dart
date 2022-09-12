@@ -6,7 +6,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class AppsController extends GetxController {
   RxBool isLoading = false.obs;
+  RxBool isLoadingMore = false.obs;
   RxList<ApplicationResponse> appList = RxList([]);
+  int page = 1;
 
   @override
   Future<void> onInit() async {
@@ -16,18 +18,27 @@ class AppsController extends GetxController {
     super.onInit();
   }
 
-  Future<List<ApplicationResponse>> getApps() async {
+  Future<List<ApplicationResponse>> getApps(int page) async {
     try {
-      List<ApplicationResponse> response = await APIService().getApplications();
+      List<ApplicationResponse> response =
+          await APIService().getApplications(page: page);
       return response;
     } catch (e) {
       ExceptionHandler().handle(e);
-      return [ApplicationResponse(id: 0)];
+      return [];
     }
   }
 
   getData() async {
-    appList.value = await getApps();
+    appList.value = await getApps(page);
+  }
+
+  loadMore() async {
+    isLoadingMore.value = true;
+    page++;
+    List<ApplicationResponse> list = await getApps(page);
+    if (list.isNotEmpty) appList.addAll(list);
+    isLoadingMore.value = false;
   }
 
   Future<void> urlLaunch(int i) async {
