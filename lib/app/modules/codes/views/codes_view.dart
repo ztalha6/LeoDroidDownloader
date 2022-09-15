@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -43,7 +44,30 @@ class CodesView extends GetView<CodesController> {
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
                               const Spacer(),
-                              Image.network(model.appList[i].acf!.icon!),
+                              CachedNetworkImage(
+                                imageUrl: model.appList[i].acf!.icon!,
+                                imageBuilder: (context, imageProvider) =>
+                                    Container(
+                                  width: 400,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      //image size fill
+                                      image: imageProvider,
+                                      fit: BoxFit.fitWidth,
+                                    ),
+                                  ),
+                                ),
+                                placeholder: (context, url) => Container(
+                                  alignment: Alignment.center,
+                                  child:
+                                      CircularProgressIndicator(), // you can add pre loader iamge as well to show loading.
+                                ), //show progress  while loading image
+                                errorWidget: (context, url, error) =>
+                                    Image.asset("assets/logo.png"),
+                                //show no iamge availalbe image on error laoding
+                              ),
+                              //Image.network(model.appList[i].acf!.icon!),
                               // const Icon(
                               //   Icons.facebook,
                               //   size: 70,
