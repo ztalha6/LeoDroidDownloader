@@ -3,6 +3,9 @@ PODS:
   - AppLovinSDK (11.0.0)
   - FBAudienceNetwork (6.9.0)
   - Flutter (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
   - Google-Mobile-Ads-SDK (8.13.0):
     - GoogleAppMeasurement (< 9.0, >= 7.0)
     - GoogleUserMessagingPlatform (>= 1.1)
@@ -61,7 +64,12 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - path_provider_ios (0.0.1):
+    - Flutter
   - PromisesObjC (2.1.0)
+  - sqflite (0.0.2):
+    - Flutter
+    - FMDB (>= 2.7.5)
   - url_launcher_ios (0.0.1):
     - Flutter
 
@@ -72,6 +80,8 @@ DEPENDENCIES:
   - GoogleMobileAdsMediationAdColony
   - GoogleMobileAdsMediationAppLovin
   - GoogleMobileAdsMediationFacebook
+  - path_provider_ios (from `.symlinks/plugins/path_provider_ios/ios`)
+  - sqflite (from `.symlinks/plugins/sqflite/ios`)
   - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
 
 SPEC REPOS:
@@ -79,6 +89,7 @@ SPEC REPOS:
     - AdColony
     - AppLovinSDK
     - FBAudienceNetwork
+    - FMDB
     - Google-Mobile-Ads-SDK
     - GoogleAppMeasurement
     - GoogleMobileAdsMediationAdColony
@@ -94,6 +105,10 @@ EXTERNAL SOURCES:
     :path: Flutter
   google_mobile_ads:
     :path: ".symlinks/plugins/google_mobile_ads/ios"
+  path_provider_ios:
+    :path: ".symlinks/plugins/path_provider_ios/ios"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/ios"
   url_launcher_ios:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
@@ -102,6 +117,7 @@ SPEC CHECKSUMS:
   AppLovinSDK: 2b7b5ba1f8523455b66d247f2a37c62354241283
   FBAudienceNetwork: 83096d73433759c10f9cf9b3bad5e5cff58694cb
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
   Google-Mobile-Ads-SDK: 05e5d68bb42a61b2e5bef336a52789785605aa22
   google_mobile_ads: 36eaaacc5c08ca2b9c4878232ab98152b11805cc
   GoogleAppMeasurement: 4c19f031220c72464d460c9daa1fb5d1acce958e
@@ -111,7 +127,9 @@ SPEC CHECKSUMS:
   GoogleUserMessagingPlatform: ab890ce5f6620f293a21b6bdd82e416a2c73aeca
   GoogleUtilities: e0913149f6b0625b553d70dae12b49fc62914fd1
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
   PromisesObjC: 99b6f43f9e1044bd87a95a60beff28c2c44ddb72
+  sqflite: 6d358c025f5b867b29ed92fc697fd34924e11904
   url_launcher_ios: 839c58cdb4279282219f5e248c3321761ff3c4de
 
 PODFILE CHECKSUM: 0a11a733b955b62d7f6df0deec0282f86f10bd41

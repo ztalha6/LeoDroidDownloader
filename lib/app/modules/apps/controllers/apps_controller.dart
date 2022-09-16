@@ -24,7 +24,7 @@ class AppsController extends GetxController {
           await APIService().getApplications(page: page);
       return response;
     } catch (e) {
-      ExceptionHandler().handle(e);
+      // ExceptionHandler().handle(e);
       return [];
     }
   }

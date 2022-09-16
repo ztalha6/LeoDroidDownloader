@@ -25,7 +25,7 @@ class CodesController extends GetxController {
           : await APIService().getApplications(withcode: true, page: page);
       return response;
     } catch (e) {
-      ExceptionHandler().handle(e);
+      // ExceptionHandler().handle(e);
       return [];
     }
   }

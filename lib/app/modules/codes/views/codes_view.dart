@@ -60,8 +60,9 @@ class CodesView extends GetView<CodesController> {
                                 ),
                                 placeholder: (context, url) => Container(
                                   alignment: Alignment.center,
-                                  child:
-                                      CircularProgressIndicator(), // you can add pre loader iamge as well to show loading.
+                                  child: CircularProgressIndicator(
+                                    color: Color(0xff5f1399),
+                                  ), // you can add pre loader iamge as well to show loading.
                                 ), //show progress  while loading image
                                 errorWidget: (context, url, error) =>
                                     Image.asset("assets/logo.png"),
